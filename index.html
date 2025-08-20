@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="header">
+        <h1>Flight Booking Platform</h1>
+    </header>
+    <main class="main-content">
+        <section class="flight-inputs">
+            <div class="input-group">
+                <label for="origin">From</label>
+                <input list="cities" id="origin" name="origin" placeholder="Select origin city" autocomplete="off" />
+            </div>
+            <div class="input-group">
+                <label for="destination">To</label>
+                <input list="cities" id="destination" name="destination" placeholder="Select destination city" autocomplete="off" />
+            </div>
+            <datalist id="cities">
+                <option value="Bangkok - Thailand (BKK)"></option>
+                <option value="London - United Kingdom (LHR)"></option>
+                <option value="New York - USA (JFK)"></option>
+                <option value="Paris - France (CDG)"></option>
+                <option value="Tokyo - Japan (NRT)"></option>
+                <option value="Dubai - UAE (DXB)"></option>
+                <option value="Sydney - Australia (SYD)"></option>
+                <option value="Singapore (SIN)"></option>
+                <option value="Frankfurt - Germany (FRA)"></option>
+                <option value="Los Angeles - USA (LAX)"></option>
+                <option value="Mumbai - India (BOM)"></option>
+                <option value="Hong Kong (HKG)"></option>
+                <option value="Toronto - Canada (YYZ)"></option>
+                <option value="Cairo - Egypt (CAI)"></option>
+                <option value="Rome - Italy (FCO)"></option>
+                <option value="São Paulo - Brazil (GRU)"></option>
+                <option value="Moscow - Russia (SVO)"></option>
+                <option value="Johannesburg - South Africa (JNB)"></option>
+                <option value="Seoul - South Korea (ICN)"></option>
+                <option value="Istanbul - Turkey (IST)"></option>
+            </datalist>
+            <div class="input-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" min="" />
+            </div>
+        </section>
+
+        <section class="legend-container">
+            <ul class="legend">
+                <li><div class="seat available"></div>Available</li>
+                <li><div class="seat selected"></div>Selected</li>
+                <li><div class="seat occupied"></div>Occupied</li>
+            </ul>
+        </section>
+
+        <section class="seats-section">
+            <div class="airplane">
+                <div class="row" id="row-1">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row" id="row-2">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row" id="row-3">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row" id="row-4">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row" id="row-5">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row" id="row-6">
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row" id="row-7">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row" id="row-8">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="summary-section" aria-live="polite">
+            <p class="summary-text">
+                Price per seat: <span id="pricePerSeat">-</span> USD | Seats selected: <span id="seatCount">0</span> | Total payment: <span id="totalPrice">0</span> USD
+            </p>
+            <button id="bookBtn" disabled>Book Now</button>
+        </section>
+    </main>
+
+    <div class="background-layer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
